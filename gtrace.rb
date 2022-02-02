@@ -8,17 +8,17 @@ class Gtrace < Formula
   version "1.0.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.0/gtrace_1.0.0_Darwin_x86_64.tar.gz"
-      sha256 "02a1ec49f3804987aebfcd80c7599a9d4b3b4def715218b3c7388873f9fcf90c"
+    if Hardware::CPU.arm?
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.0/gtrace_1.0.0_Darwin_arm64.tar.gz"
+      sha256 "ea499292fa057f649da264126b0f8c284ba8ccddd388c566dd0190fd1d1ac36c"
 
       def install
         bin.install "gtrace"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.0/gtrace_1.0.0_Darwin_arm64.tar.gz"
-      sha256 "7e4313310c072440374bff2ace40eff60a4f7094b459954d83fa276f26270061"
+    if Hardware::CPU.intel?
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.0/gtrace_1.0.0_Darwin_x86_64.tar.gz"
+      sha256 "128004d8cb2fa6e64864e124cb81c5c92b6d29567e723afd9c4ce6d80832e52c"
 
       def install
         bin.install "gtrace"
@@ -29,7 +29,7 @@ class Gtrace < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/moshebe/gtrace/releases/download/v1.0.0/gtrace_1.0.0_Linux_x86_64.tar.gz"
-      sha256 "4189b51d040c34fe91f46c53dc5648d3e9ccfb0c8d172d4fba96734501589993"
+      sha256 "e9b5b6d631e2099e4321eef389fd7f6392d0bff188fc1b14a15c3df2c0f9aab3"
 
       def install
         bin.install "gtrace"
@@ -37,7 +37,7 @@ class Gtrace < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/moshebe/gtrace/releases/download/v1.0.0/gtrace_1.0.0_Linux_arm64.tar.gz"
-      sha256 "0eaf48ba02e73fb5f2baf0b37bde88be945b5c1fa0b7b82a34465c297090027b"
+      sha256 "df307be2bffd0208710b096e83b3034c17de800449a0692c193ddc873ff56365"
 
       def install
         bin.install "gtrace"
