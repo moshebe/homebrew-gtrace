@@ -5,20 +5,20 @@
 class Gtrace < Formula
   desc ""
   homepage "https://github.com/moshebe/gtrace"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.1/gtrace_1.0.1_Darwin_arm64.tar.gz"
-      sha256 "0188e15b8582b88ed4e841ee2d4c17a5d06a20f342955f671a1535475e5d40b5"
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.2/gtrace_1.0.2_Darwin_arm64.tar.gz"
+      sha256 "10a5f87dbc5816ea911b6fda0282bdc533983f3455f96b9d37842bf63a023144"
 
       def install
         bin.install "gtrace"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.1/gtrace_1.0.1_Darwin_x86_64.tar.gz"
-      sha256 "5e026dc2c25e0ce1d76d7d64f5495b60197b5ad17bfd3990f9468dbfa6f9e6ea"
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.2/gtrace_1.0.2_Darwin_x86_64.tar.gz"
+      sha256 "9416121704522d9065cd5f80173630fb7f296d290fdd62b6b49126ffe7a5a48e"
 
       def install
         bin.install "gtrace"
@@ -28,16 +28,16 @@ class Gtrace < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.1/gtrace_1.0.1_Linux_x86_64.tar.gz"
-      sha256 "bb62303c4296f6f6bae577c777cbd9ffc9366993e36d45e156b142424bf9158d"
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.2/gtrace_1.0.2_Linux_x86_64.tar.gz"
+      sha256 "ccbe7a1ee01033af9a539ce2145a9a67b093b93b20dc7f4421932f438434086d"
 
       def install
         bin.install "gtrace"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.1/gtrace_1.0.1_Linux_arm64.tar.gz"
-      sha256 "16f77bc9f854e2b4b03b6e225d25f980e5c0ee5780fd12f54784a473972f24d9"
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.2/gtrace_1.0.2_Linux_arm64.tar.gz"
+      sha256 "c72dacda022571632448732b17b28fca335abbbcade610a6b2400e1e84c17352"
 
       def install
         bin.install "gtrace"
