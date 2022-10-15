@@ -5,20 +5,20 @@
 class Gtrace < Formula
   desc ""
   homepage "https://github.com/moshebe/gtrace"
-  version "1.0.3"
+  version "1.0.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.3/gtrace_1.0.3_Darwin_arm64.tar.gz"
-      sha256 "f543638bfdf7c87f8f5af333a0eb9fad63e5f1098dbaad7082c9d17d19255733"
+    if Hardware::CPU.intel?
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.4/gtrace_1.0.4_Darwin_x86_64.tar.gz"
+      sha256 "ec82c492ea6aacb4ab6d8a319caaa4bb1d0023316339ceb425067acaaf6347e9"
 
       def install
         bin.install "gtrace"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.3/gtrace_1.0.3_Darwin_x86_64.tar.gz"
-      sha256 "f7f3fc9296255f1bf00385cbff691ed8b9a02f81581a94a47b4c7635680504d9"
+    if Hardware::CPU.arm?
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.4/gtrace_1.0.4_Darwin_arm64.tar.gz"
+      sha256 "f39a41940a4e6e3dade5aaaff0cfe72c71551bb4f91b0631e1a029cb63e5ab9f"
 
       def install
         bin.install "gtrace"
@@ -28,16 +28,16 @@ class Gtrace < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.3/gtrace_1.0.3_Linux_arm64.tar.gz"
-      sha256 "399031fdfb0674f8fd5b80754c7fd3d5b94a3357715b91061bae560b94c11ddb"
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.4/gtrace_1.0.4_Linux_arm64.tar.gz"
+      sha256 "99e7384f3acb226881df9a3d5fe560d09734c7f4e37195e41530c25821366094"
 
       def install
         bin.install "gtrace"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/moshebe/gtrace/releases/download/v1.0.3/gtrace_1.0.3_Linux_x86_64.tar.gz"
-      sha256 "1db6cddc4817476b4cbc1c4a85f4b3279e0394ea38fd3ed4844f1af5470dab2c"
+      url "https://github.com/moshebe/gtrace/releases/download/v1.0.4/gtrace_1.0.4_Linux_x86_64.tar.gz"
+      sha256 "118b3a5d8f5b3c9c9a5143224c0e07a58ca8975351f236e48e53034526c984f2"
 
       def install
         bin.install "gtrace"
