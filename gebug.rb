@@ -5,20 +5,20 @@
 class Gebug < Formula
   desc ""
   homepage "https://github.com/moshebe/gebug"
-  version "1.0.3"
+  version "1.0.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/moshebe/gebug/releases/download/v1.0.3/gebug_1.0.3_Darwin_arm64.tar.gz"
-      sha256 "c6114dc59f97d449cf8951159c0ab964a855a3c6869dc0106b5b968a2458e73a"
+    if Hardware::CPU.intel?
+      url "https://github.com/moshebe/gebug/releases/download/v1.0.4/gebug_1.0.4_Darwin_x86_64.tar.gz"
+      sha256 "2fd116b990f949a81b5659a4cfd0583b7e3d118537a0d4b91c5a6130d55ed545"
 
       def install
         bin.install "gebug"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/moshebe/gebug/releases/download/v1.0.3/gebug_1.0.3_Darwin_x86_64.tar.gz"
-      sha256 "7fdb7e0e7d28c8a348cd2f06f7a28722727eaef84ef4cd221eaa5ada6d43ae47"
+    if Hardware::CPU.arm?
+      url "https://github.com/moshebe/gebug/releases/download/v1.0.4/gebug_1.0.4_Darwin_arm64.tar.gz"
+      sha256 "0adfce2fcf4e338eb1e7a39a3251097f9967e7ee4e62ccdb7131c95cd9f12467"
 
       def install
         bin.install "gebug"
@@ -28,16 +28,16 @@ class Gebug < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moshebe/gebug/releases/download/v1.0.3/gebug_1.0.3_Linux_arm64.tar.gz"
-      sha256 "49118e06fed8a28b07338c826b3cdd57560d2d7c7c59a137d9e5a322db418846"
+      url "https://github.com/moshebe/gebug/releases/download/v1.0.4/gebug_1.0.4_Linux_arm64.tar.gz"
+      sha256 "dd7962da3c910b38506b12df05430942259ff0eb0a2ad055d211af7e14a282a4"
 
       def install
         bin.install "gebug"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/moshebe/gebug/releases/download/v1.0.3/gebug_1.0.3_Linux_x86_64.tar.gz"
-      sha256 "f1acc29f123f5948350e8a695f955c14c4463651986ee70176cdd3b717972520"
+      url "https://github.com/moshebe/gebug/releases/download/v1.0.4/gebug_1.0.4_Linux_x86_64.tar.gz"
+      sha256 "1a1af3b0499f3eb9289f4b7ae56c630fff253fd9c27ecdd996b71bf74303c1d0"
 
       def install
         bin.install "gebug"
