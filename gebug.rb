@@ -5,20 +5,20 @@
 class Gebug < Formula
   desc ""
   homepage "https://github.com/moshebe/gebug"
-  version "1.0.4"
+  version "1.0.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/moshebe/gebug/releases/download/v1.0.4/gebug_1.0.4_Darwin_x86_64.tar.gz"
-      sha256 "2fd116b990f949a81b5659a4cfd0583b7e3d118537a0d4b91c5a6130d55ed545"
+      url "https://github.com/moshebe/gebug/releases/download/v1.0.7/gebug_1.0.7_Darwin_x86_64.tar.gz"
+      sha256 "f55d1a0cd12559e2eadb20f4bc3dbd485349824560f49df77c2121d9b65184d1"
 
       def install
         bin.install "gebug"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/moshebe/gebug/releases/download/v1.0.4/gebug_1.0.4_Darwin_arm64.tar.gz"
-      sha256 "0adfce2fcf4e338eb1e7a39a3251097f9967e7ee4e62ccdb7131c95cd9f12467"
+      url "https://github.com/moshebe/gebug/releases/download/v1.0.7/gebug_1.0.7_Darwin_arm64.tar.gz"
+      sha256 "83f789c31590cf347c3d9de43193c76f32493f3986306050bac155537ae1c6c7"
 
       def install
         bin.install "gebug"
@@ -28,16 +28,16 @@ class Gebug < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moshebe/gebug/releases/download/v1.0.4/gebug_1.0.4_Linux_arm64.tar.gz"
-      sha256 "dd7962da3c910b38506b12df05430942259ff0eb0a2ad055d211af7e14a282a4"
+      url "https://github.com/moshebe/gebug/releases/download/v1.0.7/gebug_1.0.7_Linux_arm64.tar.gz"
+      sha256 "7416843d50a5feba71dcb2f1b34c84889c3888737316b31455220b2546f29303"
 
       def install
         bin.install "gebug"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/moshebe/gebug/releases/download/v1.0.4/gebug_1.0.4_Linux_x86_64.tar.gz"
-      sha256 "1a1af3b0499f3eb9289f4b7ae56c630fff253fd9c27ecdd996b71bf74303c1d0"
+      url "https://github.com/moshebe/gebug/releases/download/v1.0.7/gebug_1.0.7_Linux_x86_64.tar.gz"
+      sha256 "d206656e7961d82e601044f1ecb7b6df4895d9cd5cd54a58522af4f1e55dcb6b"
 
       def install
         bin.install "gebug"
